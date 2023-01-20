@@ -1,0 +1,40 @@
+{
+  "name": "obs-window-hotkey",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "bin": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "build": "rimraf dist/obs-window-hotkey.exe && pkg .",
+    "fix": "create-nodew-exe dist/obs-window-hotkey.exe dist/obs-window-hotkey.exe"
+  },
+  "keywords": [
+    "obs"
+  ],
+  "author": "Matthew Elphick <matt.a.elphy@gmail.com>",
+  "license": "ISC",
+  "pkg": {
+    "scripts": "src/**/*.js",
+    "assets": [
+      "node_modules/systray2/traybin/tray_windows_release.exe",
+      "node_modules/node-global-key-listener/bin/WinKeyServer.exe",
+      "assets/**/*"
+    ],
+    "outputPath": "dist",
+    "targets": [
+      "node16-win"
+    ]
+  },
+  "dependencies": {
+    "active-win": "^8.0.3",
+    "node-global-key-listener": "^0.1.1",
+    "obs-websocket-js": "^5.0.2",
+    "systray2": "^2.1.4"
+  },
+  "devDependencies": {
+    "create-nodew-exe": "^1.0.10",
+    "pkg": "^5.8.0",
+    "rimraf": "^4.1.1"
+  }
+}

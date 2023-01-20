@@ -1,0 +1,8 @@
+{
+  "obs": {
+    "uri": "ws://192.168.1.113:4455",
+    "password": "password"
+  },
+  "inputName": "Code Window",
+  "binding": ["LEFT CTRL", "LEFT SHIFT", "F"]
+}
